@@ -3,7 +3,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box; 
-	/*-moz-box-sizing: border-box;*/
 }
 
 h1 {
@@ -11,20 +10,27 @@ h1 {
 	text-align: center;
 }
 
-#container {
-    margin: 0 auto;
-    width: 100%; 
+#tabs-container {
+    margin: 0 0;
+	width: 100%; 
+	height: auto;
 }
 
-#container input {
+#tabs-container input#tabs-input-1,
+#tabs-container input#tabs-input-2 {
 	height: 2.5em;
 	visibility: hidden;
 }
 
-#container label {
-	background: #f9f9f9;  /* Fondo de las pestañas */
+#tabs-container label#tabs-label-1,
+#tabs-container label#tabs-label-2 {
+	background: #f9f9f9;  
 	border-radius: .25em .25em 0 0;
-	color: #888;  /* Color del texto de las pestañas */
+	color: #888;  
+	border-color: #444;
+	border-left: solid;
+	border-right:solid;
+	border-top:solid;
 	cursor: pointer;
 	display: block;
 	float: left;
@@ -37,33 +43,36 @@ h1 {
 	filter: blur(1px);
 }
 
-#container input + label:hover {
-	background: #ddd;  /* Fondo de las pestañas al pasar el cursor por encima */
-	color: #666;  /* Color del texto de las pestañas al pasar el cursor por encima */
+#tabs-container input#tabs-input-1 + label#tabs-label-1:hover,
+#tabs-container input#tabs-input-2 + label#tabs-label-2:hover {
+	background: #ddd;  
+	color: #666;  
 	filter: blur(0px);
 	transition: all 0.5s ease-out;
 }
 
-#container input:checked + label {
-	background: #f1f1f1;  /* Fondo de las pestañas al presionar */
-	color: #444; /* Color de las pestañas al presionar */
+#tabs-container input#tabs-input-1:checked + label#tabs-label-1,
+#tabs-container input#tabs-input-2:checked + label#tabs-label-2 {
+	background: #f1f1f1;  
+	color: #444; 
 	position: relative;
 	z-index: 6;
 	filter: blur(0px);
 }
 
-#content {
-	background: #f1f1f1;  /* Fondo del contenido */
+#tabs-content {
+	background: #f1f1f1;  
 	border-radius: 0 .25em .25em .25em;
-	min-height: 20em;  /* Alto del contenido */
+	min-height: 20em;  
 	position: relative;
 	width: 100%;
 	z-index: 5;
+	border-color: #444;	
+	border:solid;
 }
 
-#content div#content-1,
-#content div#content-2,
-#content div#content-3 {
+#tabs-content div#tabs-content-1,
+#tabs-content div#tabs-content-2 {
 	opacity: 0;
 	padding: 1.5em;
 	position: absolute;
@@ -72,45 +81,26 @@ h1 {
 	transition: all 0.1s ease-out;
 }
 
-#content p {
+#tabs-content p {
 	margin-bottom: 1em;
 }
 
-#content p.last {
+#tabs-content p.last {
 	margin-bottom: 0;
 }
 
-#content p.column-left {
+#tabs-content p.column-left {
 	float:left;
 	width:48%;
 }
 
-#content-2 p {
-	float: left;
-	width: 48%;
-}
-#content-2 p.column-right {
-	margin-left: 3%;
-}
-#content-2 p img {
-	display: block;
-	margin: 0 auto 1em auto;
-}
-#content-3 p,
-#content-3 ul {
-	margin-bottom: 1em;
-}
-#content-3 ul {
-	margin-left: 2em;
-}
 
 /*
 in the following, we are using the general sibling combinator to match content elements.  
-The flow should be as follows:  select #content-1 within #content as long as it's sibling input#tab-1 within #container is checked.
+The flow should be as follows:  select #tabs-content-1 within #tabs-content as long as it's sibling input#tabs-input-1 within #tabs-container is checked.
 */
-#container input#tab-1:checked ~ #content #content-1,
-#container input#tab-2:checked ~ #content #content-2,
-#container input#tab-3:checked ~ #content #content-3 {
+#tabs-container input#tabs-input-1:checked ~ #tabs-content #tabs-content-1,
+#tabs-container input#tabs-input-2:checked ~ #tabs-content #tabs-content-2 {
     opacity: 1;
     z-index: 100;
 }

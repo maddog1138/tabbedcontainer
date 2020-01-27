@@ -7,43 +7,26 @@
 	<!-- Title -->
 	<h1>Tabs with CSS3 & HTML5 only</h1>
 	<!--the following is the main container for all the components of the tabbed panes-->
-	<div id="container">
+	<div id="tabs-container">
 		<!--Tab 1 active by default-->
-	    <input id="tab-1" type="radio" name="tab-group" checked="checked" />
-	    <label for="tab-1">About</label>
+	    <input id="tabs-input-1" type="radio" name="tab-group" checked="checked" />
+	    <label id="tabs-label-1" for="tabs-input-1">About</label>
 	    <!--Tab 2 inactive by default-->
-	    <input id="tab-2" type="radio" name="tab-group" />
-	    <label for="tab-2">Tab 2</label>
-	    <!--Tab 3 inactive by default-->
-	    <input id="tab-3" type="radio" name="tab-group" />
-	    <label for="tab-3">Tab 3</label>
+	    <input id="tabs-input-2" type="radio" name="tab-group" />
+	    <label id="tabs-label-2" for="tabs-input-2">Project</label>
 	    <!--container for main content-->
-	    <div id="content">
+	    <div id="tabs-content">
 	    	<!--Tab 1 content-->
-	        <div id="content-1">
-				<p class="">This is a sample project illustrating the use of css3 and html to create simple tabbed panes.  The css and html code in this project has been styled on the following codepen: <a target="_blank" rel="noreferrer noopener" href="https://codepen.io/calotesantos/pen/LYEMRRp">Tabs with CSS3 & HTML5 only</a>.  Visit this codepen to also see some examples of content formatting within tabbed panes.</p>
-				<p>The code has been modified somewhat to update the css syntax and styling, and remove some of the internal content formatting rules.  However the mechanics of the tabbed pane structure remain largely the same.  The tabbed pane functionality in this example has been achieved with the help of CSS styling of radio input html tags.</p>
+	        <div id="tabs-content-1">
+				<p>This is a sample project illustrating the use of css3 and html to create simple tabbed panes.</p>
+				<p>The tabbed panes in this example are achieved with CSS and HTML.</p>
 
-				<div>
-					<p class="column-left">this is the left column paragraph</p>
-					<p class="">this is the right column paragraph</p>
-				</div>
-	            <p class="last">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, id blanditiis deserunt in molestiae excepturi incidunt molestias dolor sunt dolore obcaecati non repellat mollitia error placeat est exercitationem sit voluptates iure autem saepe voluptas harum unde perferendis modi provident labore voluptatum. Repudiandae, aspernatur sit harum quod vero quos sequi voluptas!</p>
+
 	        </div>
 	        <!--Tab 2 content-->
-	        <div id="content-2">
-	            <p class="column-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, est, nisi enim voluptates dicta quibusdam recusandae eveniet provident non at nostrum nesciunt laudantium omnis aliquam debitis magni expedita cumque tempore.</p>
-            	<p class="column-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, molestiae, officia repellendus quasi cumque dolor eius deserunt possimus aliquid neque nam assumenda veniam soluta enim commodi aperiam reprehenderit quia incidunt.</p>
-	        </div>
-	        <!--Tab 3 content-->
-	        <div id="content-3">
-	        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
-	        	<ul>
-	        		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
-	        		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
-	        		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
-	        	</ul>
-	        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
+	        <div id="tabs-content-2">
+				<p>This is the second tab.  In this tab we will keep project content.</p>
+	           
 	        </div>
 	    </div>
 	</div>
