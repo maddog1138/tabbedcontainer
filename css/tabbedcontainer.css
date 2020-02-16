@@ -24,18 +24,34 @@
 	min-height: var(--tabs-container-height);
 	margin: var(--tabs-container-margin);
 	display:grid;
-	grid-template-rows:2.5em auto;
+	grid-template-rows:2.5em auto;  /* setup the row for tabs to be 2.5em, and the tab contents to fill the rest of the container */
 }
 
 
-input#tabs-input-1,
-input#tabs-input-2 {
+input#tabs-input-10,
+input#tabs-input-9,
+input#tabs-input-8,
+input#tabs-input-7,
+input#tabs-input-6,
+input#tabs-input-5,
+input#tabs-input-4,
+input#tabs-input-3,
+input#tabs-input-2,
+input#tabs-input-1 {
 	display:none;
 	z-index: -100;
 }
 
-label#tabs-label-1,
-label#tabs-label-2 {
+label#tabs-label-10,
+label#tabs-label-9,
+label#tabs-label-8,
+label#tabs-label-7,
+label#tabs-label-6,
+label#tabs-label-5,
+label#tabs-label-4,
+label#tabs-label-3,
+label#tabs-label-2,
+label#tabs-label-1 {
 	background: linear-gradient( #ffe0b8, #b38a55);  
 	border-radius: .50em .50em 0 0;
 	color: #444444;  
@@ -50,14 +66,30 @@ label#tabs-label-2 {
 	text-align: center;
 }
 
-label#tabs-label-1:hover,
-label#tabs-label-2:hover {
+label#tabs-label-10:hover,
+label#tabs-label-9:hover,
+label#tabs-label-8:hover,
+label#tabs-label-7:hover,
+label#tabs-label-6:hover,
+label#tabs-label-5:hover,
+label#tabs-label-4:hover,
+label#tabs-label-3:hover,
+label#tabs-label-2:hover,
+label#tabs-label-1:hover {
     background: linear-gradient( #ffe7ca, #c29964);  
 	color: #252525;  
 }
 
- input#tabs-input-1:checked ~ #tabs-container label#tabs-label-1,
- input#tabs-input-2:checked ~ #tabs-container label#tabs-label-2 {
+input#tabs-input-10:checked ~ #tabs-container label#tabs-label-10,
+input#tabs-input-9:checked ~ #tabs-container label#tabs-label-9,
+input#tabs-input-8:checked ~ #tabs-container label#tabs-label-8,
+input#tabs-input-7:checked ~ #tabs-container label#tabs-label-7,
+input#tabs-input-6:checked ~ #tabs-container label#tabs-label-6,
+input#tabs-input-5:checked ~ #tabs-container label#tabs-label-5,
+input#tabs-input-4:checked ~ #tabs-container label#tabs-label-4,
+input#tabs-input-3:checked ~ #tabs-container label#tabs-label-3,
+input#tabs-input-2:checked ~ #tabs-container label#tabs-label-2,
+input#tabs-input-1:checked ~ #tabs-container label#tabs-label-1 {
 	background: linear-gradient( #ffeed8, #ffe0b8);  
     color: rgb(0, 0, 0); 
 	position: relative;
@@ -75,8 +107,16 @@ label#tabs-label-2:hover {
 	z-index: 5;
 }
 
-div#tabs-content-1,
-div#tabs-content-2 {
+div#tabs-content-10,
+div#tabs-content-9,
+div#tabs-content-8,
+div#tabs-content-7,
+div#tabs-content-6,
+div#tabs-content-5,
+div#tabs-content-4,
+div#tabs-content-3,
+div#tabs-content-2,
+div#tabs-content-1 {
 	opacity: 0;
 	padding: 1.5em;
 	position: absolute;
@@ -103,8 +143,16 @@ div#tabs-content-2 {
 in the following, we are using the general sibling combinator to match content elements.  
 The flow should be as follows:  select #tabs-content-1 within #tabs-content as long as it's sibling input#tabs-input-1 within #tabs-container is checked.
 */
-input#tabs-input-1:checked ~ #tabs-container #tabs-content-1,
-input#tabs-input-2:checked ~ #tabs-container #tabs-content-2 {
+input#tabs-input-10:checked ~ #tabs-container #tabs-content-10,
+input#tabs-input-9:checked ~ #tabs-container #tabs-content-9,
+input#tabs-input-8:checked ~ #tabs-container #tabs-content-8,
+input#tabs-input-7:checked ~ #tabs-container #tabs-content-7,
+input#tabs-input-6:checked ~ #tabs-container #tabs-content-6,
+input#tabs-input-5:checked ~ #tabs-container #tabs-content-5,
+input#tabs-input-4:checked ~ #tabs-container #tabs-content-4,
+input#tabs-input-3:checked ~ #tabs-container #tabs-content-3,
+input#tabs-input-2:checked ~ #tabs-container #tabs-content-2,
+input#tabs-input-1:checked ~ #tabs-container #tabs-content-1 {
     opacity: 1;
     z-index: 100;
 }
