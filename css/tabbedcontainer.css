@@ -52,7 +52,7 @@ label#tabs-label-4,
 label#tabs-label-3,
 label#tabs-label-2,
 label#tabs-label-1 {
-	background: linear-gradient( #ffe0b8, #b38a55);  
+	background: linear-gradient(#b38a55, #dfb988);  
 	border-radius: .50em .50em 0 0;
 	color: #444444;  
     cursor: pointer;
@@ -76,7 +76,7 @@ label#tabs-label-4:hover,
 label#tabs-label-3:hover,
 label#tabs-label-2:hover,
 label#tabs-label-1:hover {
-    background: linear-gradient( #ffe7ca, #c29964);  
+    background: linear-gradient( #ffe7ca, #dfb988);  
 	color: #252525;  
 }
 
